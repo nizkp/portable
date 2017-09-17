@@ -56,7 +56,7 @@ typedef SSIZE_T ssize_t;
 #define __STRING(x) #x
 #endif
 
-#if defined(__GNUC__)  && defined (HAS_GNU_WARNING_LONG)
+#if defined(__GNUC__)  && defined (HAS_GNU_WARNING_LONG) && !defined(OPENSSL_NO_ASM)
 #define __warn_references(sym,msg)          \
   __asm__(".section .gnu.warning." __STRING(sym)  \
          " ; .ascii \"" msg "\" ; .text");
