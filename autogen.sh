@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-./update.sh
+LIBRESSL_GIT=https://github.com/nizkp/ ./update.sh
 mkdir -p m4
 autoreconf -i -f
 
